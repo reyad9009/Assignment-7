@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "cover": "https://i.ibb.co.com/FBRFRJm/Abhishek-Sharma.webp",
+      "name": "Abhishek Sharma",
+      "country": "India",
+      "role": "Top order Batter",
+      "batting_style": "Right hand Bat",
+      "bowling_style": "Right arm Medium",
+      "price": 1500000
+    },
+    {
+      "id": 2,
+      "cover": "https://i.ibb.co.com/c8Qz3Tx/Anuj-Rawat.webp",
+      "name": "Anuj Rawat",
+      "country": "India",
+      "role": "Wicketkeeper Batter",
+      "batting_style": "Left hand Bat",
+      "bowling_style": "N/A",
+      "price": 1800000
+    },
+    {
+      "id": 3,
+      "cover": "https://i.ibb.co.com/ByKCVRC/Jaker-Ali.webp",
+      "name": "Jaker Ali",
+      "country": "Bangladesh",
+      "role": "Batter",
+      "batting_style": "Right hand Bat",
+      "bowling_style": "N/A",
+      "price": 1600000
+    },
+    {
+      "id": 4,
+      "cover": "https://i.ibb.co.com/HFbnfRw/KL-Rahul.webp",
+      "name": "KL Rahul",
+      "country": "India",
+      "role": "Wicketkeeper Batter",
+      "batting_style": "Right hand Bat",
+      "bowling_style": "N/A",
+      "price": 2000000
+    },
+    {
+      "id": 5,
+      "cover": "https://i.ibb.co.com/svMsyYM/Litton-Das.webp",
+      "name": "Litton Das",
+      "country": "Bangladesh",
+      "role": "Wicketkeeper Batter",
+      "batting_style": "Right hand Bat",
+      "bowling_style": "Right arm Offbreak",
+      "price": 1750000
+    },
+    {
+      "id": 6,
+      "cover": "https://i.ibb.co.com/YPVYpT5/Mehidy-Hasan-Miraz.webp",
+      "name": "Mehidy Hasan Miraz",
+      "country": "Bangladesh",
+      "role": "Allrounder",
+      "batting_style": "Right hand Bat",
+      "bowling_style": "Right arm Offbreak",
+      "price": 1300000
+    },
+    {
+      "id": 7,
+      "cover": "https://i.ibb.co.com/2qhwq35/Mohammad-Saifuddin.webp",
+      "name": "Mohammad Saifuddin",
+      "country": "Bangladesh",
+      "role": "Bowling Allrounder",
+      "batting_style": "Left hand Bat",
+      "bowling_style": "Right arm Medium fast",
+      "price": 1900000
+    },
+    {
+      "id": 8,
+      "cover": "https://i.ibb.co.com/frDvvWX/Mushfiqur-Rahim.webp",
+      "name": "Mushfiqur Rahim",
+      "country": "Bangladesh",
+      "role": "Wicketkeeper Batter",
+      "batting_style": "Right hand Bat",
+      "bowling_style": "N/A",
+      "price": 1700000
+    },
+    {
+      "id": 9,
+      "cover": "https://i.ibb.co.com/dW04hw6/Rohit-Sharma.webp",
+      "name": "Rohit Sharma",
+      "country": "India",
+      "role": "Top order Batter",
+      "batting_style": "Right hand Bat",
+      "bowling_style": "Right arm Offbreak",
+      "price": 1850000
+    },
+    {
+      "id": 10,
+      "cover": "https://i.ibb.co.com/xfbPZd1/Sarfaraz-Khan.webp",
+      "name": "Sarfaraz Khan",
+      "country": "India",
+      "role": "Middle order Batter",
+      "batting_style": "Right hand Bat",
+      "bowling_style": "Legbreak",
+      "price": 1400000
+    },
+    {
+      "id": 11,
+      "cover": "https://i.ibb.co.com/gFQK23H/Shakib-Al-Hasan.webp",
+      "name": "Shakib Al Hasan",
+      "country": "Bangladesh",
+      "role": "Allrounder",
+      "batting_style": "Left hand Bat",
+      "bowling_style": "Slow Left arm Orthodox",
+      "price": 2100000
+    },
+    {
+      "id": 12,
+      "cover": "https://i.ibb.co.com/YQPMcQd/Virat-Kohli.webp",
+      "name": "Virat Kohli",
+      "country": "India",
+      "role": "Top order Batter",
+      "batting_style": "Right hand Bat",
+      "bowling_style": "Right arm Medium",
+      "price": 2200000
+    }
+  ]
+  
