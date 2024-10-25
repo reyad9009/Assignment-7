@@ -1,4 +1,4 @@
-# React + Vite
+# Dream 11 Cricket Team
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
