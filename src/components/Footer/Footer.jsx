@@ -4,7 +4,9 @@ const Footer = () => {
     return (
         <div>
             <footer className="footer flex items-center justify-center flex-col bg-[#060919] pt-96 p-4 relative">
+
                 <img src={footerLogo} alt="" />
+                
                 <div className="flex justify-center gap-56  text-white mt-8">
                     <nav className='w-[20%]'>
                         <h6 className="text-lg text-white">About Us</h6>
@@ -37,8 +39,10 @@ const Footer = () => {
                         </fieldset>
                     </form>
                 </div> 
+
                 <span className='w-full h-[0.01rem] bg-[#303030] absolute top-[90%]'></span> 
                 <p className='text-[#9b9da3] text-[1rem] divide-y divide-[9b9da3] pt-32 pb-5'>@2024 Your Company All Rights Reserved.</p>
+
             </footer>
         </div>
     );

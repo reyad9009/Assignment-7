@@ -1,10 +1,12 @@
 import logo from '../../assets/logo.png'
-import coin from '../../assets/coin.png'
+import coinImg from '../../assets/coin.png'
+import PropTypes from 'prop-types';
 
-const Header = () => {
+const Header = ({coin}) => {
     return (
         <div>
             <div className="navbar bg-base-100 px-36">
+                
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,7 +33,6 @@ const Header = () => {
                     <img className="" src={logo} alt="" />
                 </div>
 
-
                 <div className="navbar-end">
                     <div className="hidden lg:flex mr-4">
                         <ul className="menu menu-horizontal px-1">
@@ -42,14 +43,17 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="flex gap-3 items-center">
-                        <span>0</span>
+                        <span>{coin}</span>
                         <span>Coin</span>
-                        <img src={coin} alt="" />
+                        <img src={coinImg} alt="" />
                     </div>
                 </div>
+
             </div>
         </div>
     );
 };
-
+Header.propTypes = {
+    coin: PropTypes.func,
+}
 export default Header;
