@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useState } from 'react'
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Footer from './components/Footer/Footer'
@@ -7,21 +7,27 @@ import Players from './Players/Players'
 import Availablenav from './components/Availablenav/Availablenav'
 import Selected from './components/Selected/Selected'
 
+
 function App() {
 
   //set Claim Free Credit
   const [coin, setCoin] = useState(0);
   // function handle button every click add money
   const handleCoin = () =>{
-    setCoin(coin + 90000000) 
+    setCoin(coin + 90000000)
   }
-
 
   // Functions for show the Components
   const [selected, setSelected] = useState(true);
   const handleSelected = () => setSelected(true);
   const handleAvailable = () => setSelected(false);
 
+  const [choosePlayer, setChoosePlayer] = useState([]);
+  const handleAddToSelected = (player) =>{
+    const newChoosePlayer = [...choosePlayer, player]
+    setChoosePlayer(newChoosePlayer);
+    //console.log(player)
+  }
 
   return (
     <>
@@ -33,10 +39,10 @@ function App() {
         <Availablenav handleAvailable={handleAvailable} handleSelected={handleSelected} />
 
         {/* when click  Available & Add More Player btn the show players Components also show Always Available component*/}
-        {selected && <Players handleAvailable={handleAvailable}></Players>}
+        {selected && <Players handleAvailable={handleAvailable} handleAddToSelected={handleAddToSelected}></Players>}
         
         {/* when click  Selected show Selected Component*/}
-        {!selected &&  <Selected handleSelected={handleSelected}></Selected>}
+        {!selected &&  <Selected handleSelected={handleSelected} choosePlayer={choosePlayer}></Selected>}
 
       </main>
       <Footer></Footer>

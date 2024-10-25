@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import Player from "../Player/Player";
+import PropTypes from "prop-types";
 
-const Players = ({handleAvailable}) => {
+// const Players = ({handleAvailable, handleAddToSelected}) => {
+const Players = ({handleAddToSelected}) => {
     const [players, setPlayers] = useState([]);
 
     useEffect(()=>{
@@ -13,10 +15,13 @@ const Players = ({handleAvailable}) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-[70%] mx-auto">
             {
-                players.map((players, playersId)=> <Player  key={playersId} player={players}></Player>)
+                players.map((players, playersId)=> <Player  key={playersId} player={players} handleAddToSelected={handleAddToSelected}></Player>)
             }
         </div>
     );
 };
 
+Players.propTypes = {
+    handleAddToSelected: PropTypes.func.isRequired
+}
 export default Players;

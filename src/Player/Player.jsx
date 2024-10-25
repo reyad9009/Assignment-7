@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Player = ({player}) => {
+const Player = ({player, handleAddToSelected}) => {
     const {cover, name, country, role, batting_style, bowling_style, price} = player;
     //console.log(cover)
 
@@ -22,7 +22,7 @@ const Player = ({player}) => {
                 </div>
                 <div className="flex justify-between items-center mt-4">
                     <span>Price: <span>{price}</span></span>
-                    <button className="btn">Choose Player</button>
+                    <button onClick={()=>handleAddToSelected(player)} className="btn">Choose Player</button>
                 </div>
             </div>
         </div>
@@ -32,7 +32,8 @@ const Player = ({player}) => {
 };
 
 Player.propTypes = {
-    player: PropTypes.object.isRequired
+    player: PropTypes.object.isRequired,
+    handleAddToSelected:PropTypes.func
 }
 
 export default Player;
