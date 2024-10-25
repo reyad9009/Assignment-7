@@ -3,6 +3,8 @@ import './App.css'
 import Banner from './components/Banner/Banner'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
+import Players from './Players/Players'
+import Anailablenav from './components/Availablenav/Anailablenav'
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
       <Header coin={coin}></Header>
       <main>
         <Banner handleCoin={handleCoin}></Banner>
+        <Anailablenav></Anailablenav>
+        <Players></Players>
       </main>
 
       <Footer></Footer>

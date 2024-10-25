@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Header = ({coin}) => {
     return (
         <div>
-            <div className="navbar bg-base-100 px-36">
+            <div className="navbar bg-base-100 px-36 mt-5">
                 
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -54,6 +54,6 @@ const Header = ({coin}) => {
     );
 };
 Header.propTypes = {
-    coin: PropTypes.func,
+    coin: PropTypes.number,
 }
 export default Header;
