@@ -11,6 +11,7 @@ import {toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+
 function App() {
 
   //set Claim Free Credit
@@ -108,17 +109,15 @@ function App() {
   };
 
   const deleteSelectedPlayer = (playerToRemove) =>{
-    const updatedPlayers = choosePlayer.filter(
-      (player) => player.name !== playerToRemove.name
-  );
-  setChoosePlayer(updatedPlayers);
+    const updatedPlayers = choosePlayer.filter((player) => player.name !== playerToRemove.name);
+    setChoosePlayer(updatedPlayers);
   }
 //
   return (
     <>
     <ToastContainer/>
       <Header  coin={coin} ></Header>
-      <main>
+      <main className='grid grid-cols-1'>
         <Banner handleCoin={handleCoin} />
 
         {/* Conditional rendering on button for show Selected and Players Components*/}
@@ -129,6 +128,7 @@ function App() {
         
         {/* when click  Selected show Selected Component*/}
         {!selected &&  <Selected handleSelected={handleSelected} choosePlayer={choosePlayer} deleteSelectedPlayer={deleteSelectedPlayer}></Selected>}
+
 
       </main>
       <Footer></Footer>

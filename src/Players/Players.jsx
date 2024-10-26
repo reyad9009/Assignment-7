@@ -13,7 +13,7 @@ const Players = ({handleAddToSelected}) => {
     },[])
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-[70%] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-[69%] mx-auto mt-14 pb-96">
             {
                 players.map((players, playersId)=> <Player  key={playersId} player={players} handleAddToSelected={handleAddToSelected}></Player>)
             }

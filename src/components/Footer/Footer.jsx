@@ -1,10 +1,28 @@
 import footerLogo from '../../assets/logo-footer.png'
-
+import bgShadow from '../../assets/bg-shadow.png'
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer flex items-center justify-center flex-col bg-[#060919] pt-96 p-4 relative">
-
+        <div className='relative'>
+            <div className='flex justify-center items-center'>
+            <div className='absolute top-[-200px] z-10'>
+                <div className="flex items-center justify-center mt-8 relative">
+                    
+                    <img className="relative w-[1292px] h-[336px] rounded-xl bg-white" src={bgShadow} alt="Background"/>
+                    
+                    <div className="absolute flex flex-wrap flex-col items-center justify-center text-center">
+                    <h1 className='text-3xl font-extrabold'>Subscribe to our Newsletter</h1>
+                    <p className='text-lg py-5'>Get the latest updates and news right in your inbox!</p>
+                    <div className='flex gap-3'>
+                            <input type="text" placeholder="Enter your email" className="input input-bordered w-full max-w-xs" />
+                            <button className='btn bg-gradient-to-r from-fuchsia-300 to-orange-300'>Subscribe</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <footer className="footer flex items-center justify-center flex-col bg-[#060919] pt-72 p-4 relative">
+            
                 <img src={footerLogo} alt="" />
                 
                 <div className="flex justify-center gap-56  text-white mt-8">
