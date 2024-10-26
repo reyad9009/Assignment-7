@@ -21,7 +21,7 @@ const Player = ({player, handleAddToSelected}) => {
                     <span>{bowling_style}</span>
                 </div>
                 <div className="flex justify-between items-center mt-4">
-                    <span>Price: <span>{price}</span></span>
+                    <span>Price: $<span>{price}</span></span>
                     <button onClick={()=>handleAddToSelected(player)} className="btn">Choose Player</button>
                 </div>
             </div>
