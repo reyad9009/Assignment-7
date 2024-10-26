@@ -17,7 +17,7 @@ function App() {
   const [coin, setCoin] = useState(0);
   // function handle button every click add money
   const handleCoin = () =>{
-    setCoin(coin + 900000)
+    setCoin(coin + 90000000)
     
   }
 
@@ -60,6 +60,19 @@ function App() {
           theme: "light",
         });
     } 
+    else if(choosePlayer.some(players => players.name === player.name)){
+
+      toast.warn(`${player.name} already selected !`, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
     else if(choosePlayer.length >= 6){
      // setCoin(coin - player.price)
       toast.warn('You can select only 6 players!',{
@@ -81,7 +94,7 @@ function App() {
         //setChoosePlayer([...choosePlayer, player]);
         setCoin(coin - player.price);
 
-        toast.success(`Congrats!! ${player.name}`, {
+        toast.success(`Congrats!! ${player.name} is now in your squad`,{
           position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
