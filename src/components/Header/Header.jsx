@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 const Header = ({coin}) => {
     return (
-        <div>
-            <div className="navbar bg-base-100 px-36 mt-5">
+        <div className='flex justify-center'>
+            <div className="navbar bg-base-100 w-[69%] mt-5">
                 
                 <div className="navbar-start">
                     <div className="dropdown">

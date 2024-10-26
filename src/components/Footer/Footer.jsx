@@ -25,7 +25,7 @@ const Footer = () => {
             
                 <img src={footerLogo} alt="" />
                 
-                <div className="flex justify-center gap-56  text-white mt-8">
+                <div className="flex justify-center flex-col lg:flex-row gap-56  text-white mt-8">
                     <nav className='w-[20%]'>
                         <h6 className="text-lg text-white">About Us</h6>
                         <p className="link link-hover text-[1rem] text-[#9b9da3] leading-8 mt-4">We are a passionate team dedicated to providing the best services to our customers.</p>

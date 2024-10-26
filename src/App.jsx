@@ -45,7 +45,7 @@ function App() {
   //adding nomber of player
   const [choosePlayer, setChoosePlayer] = useState([]);
 
-  const handleAddToSelected = (player) => {
+  const handleAddToSelected = (player) =>{
     //const selectedCount = choosePlayer.length;
     if (coin < player.price) {
       //const newChoosePlayer = [...choosePlayer, player];
