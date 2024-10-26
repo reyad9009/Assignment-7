@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Selected = ({handleSelected, choosePlayer, deleteSelectedPlayer}) => {
     return (
-        <div className="  flex items-center justify-center">
+        <div className="  flex items-center justify-center h-lvh">
             <div className="flex flex-col w-12/12 w-[70%]">
                 <h1>Selected Player({choosePlayer.length}/6)</h1>
                 <div className="">
