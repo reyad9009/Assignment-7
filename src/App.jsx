@@ -106,6 +106,13 @@ function App() {
         });
     }
   };
+
+  const deleteSelectedPlayer = (playerToRemove) =>{
+    const updatedPlayers = choosePlayer.filter(
+      (player) => player.name !== playerToRemove.name
+  );
+  setChoosePlayer(updatedPlayers);
+  }
 //
   return (
     <>
@@ -121,7 +128,7 @@ function App() {
         {selected && <Players handleAvailable={handleAvailable} handleAddToSelected={handleAddToSelected}></Players>}
         
         {/* when click  Selected show Selected Component*/}
-        {!selected &&  <Selected handleSelected={handleSelected} choosePlayer={choosePlayer} ></Selected>}
+        {!selected &&  <Selected handleSelected={handleSelected} choosePlayer={choosePlayer} deleteSelectedPlayer={deleteSelectedPlayer}></Selected>}
 
       </main>
       <Footer></Footer>

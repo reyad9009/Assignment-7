@@ -1,7 +1,7 @@
 import Select from "../Select/Select";
 import PropTypes from "prop-types";
 
-const Selected = ({handleSelected, choosePlayer}) => {
+const Selected = ({handleSelected, choosePlayer, deleteSelectedPlayer}) => {
     return (
         <div className="  flex items-center justify-center">
             <div className="flex flex-col w-12/12 w-[70%]">
@@ -9,7 +9,7 @@ const Selected = ({handleSelected, choosePlayer}) => {
                 <div className="">
                     <div className="flex flex-col gap-3 my-8">
                         {
-                            choosePlayer.map((choosePlayers, playerId)=> <Select key={playerId} select={choosePlayers}></Select>)
+                            choosePlayer.map((choosePlayers, playerId)=> <Select key={playerId} select={choosePlayers} deleteSelectedPlayer={deleteSelectedPlayer}></Select>)
                         }
                     </div>
                     <button onClick={handleSelected} className="btn">Add More Player</button>
@@ -22,6 +22,7 @@ const Selected = ({handleSelected, choosePlayer}) => {
 
 Selected.propTypes = {
     handleSelected: PropTypes.func.isRequired,
-    choosePlayer:PropTypes.array.isRequired
+    choosePlayer:PropTypes.array.isRequired,
+    deleteSelectedPlayer: PropTypes.func.isRequired
 }
 export default Selected;

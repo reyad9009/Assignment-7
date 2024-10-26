@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { AiOutlineDelete } from "react-icons/ai";
 
-const Select = ({select}) => {
+const Select = ({select, deleteSelectedPlayer}) => {
     const {cover, name,batting_style} = select;
     //console.log(name)
     return (
@@ -15,12 +15,13 @@ const Select = ({select}) => {
                     <p className="pt-2">{batting_style}</p>
                 </div>
             </div>
-            <button className="text-red-600 text-2xl"><AiOutlineDelete /></button>
+            <button onClick={()=>deleteSelectedPlayer(select)} className="text-red-600 text-2xl"><AiOutlineDelete /></button>
         </div>
     );
 };
 
 Select.propTypes = {
-    select: PropTypes.object.isRequired
+    select: PropTypes.object.isRequired,
+    deleteSelectedPlayer: PropTypes.func.isRequired
 }
 export default Select;
