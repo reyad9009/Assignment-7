@@ -7,6 +7,9 @@ import Players from './Players/Players'
 import Availablenav from './components/Availablenav/Availablenav'
 import Selected from './components/Selected/Selected'
 
+import {toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
 
@@ -22,27 +25,72 @@ function App() {
   const handleSelected = () => setSelected(true);
   const handleAvailable = () => setSelected(false);
 
+    //const [addPlayer, setAddPlayer] = useState(0);
+    //for use handle Choosen player and add Choosen player in the selection Component
+    // const [choosePlayer, setChoosePlayer] = useState([]);
+    // const handleAddToSelected = (player, addedPlayers) =>{
+    //   const newChoosePlayer = [...choosePlayer, addedPlayers]
+    //   setChoosePlayer(newChoosePlayer);
+    //   //console.log(player)
+    //   const newAddedPlayer = addPlayer + player;
+    //   setAddPlayer(newAddedPlayer);
+    //   if(newAddedPlayer.length  === 6){
+    //     alert("You have selected 6 players!");
+    //   }
+    // }
+
+  //adding nomber of player
   const [choosePlayer, setChoosePlayer] = useState([]);
-  const handleAddToSelected = (player) =>{
-    const newChoosePlayer = [...choosePlayer, player]
-    setChoosePlayer(newChoosePlayer);
-    //console.log(player)
-  }
+
+  const handleAddToSelected = (player) => {
+    //const selectedCount = choosePlayer.length;
+
+    if (choosePlayer.length < 6) {
+      const newChoosePlayer = [...choosePlayer, player];
+        setChoosePlayer(newChoosePlayer);
+
+        toast.success(`Congrats!! ${player.name}`, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+    } 
+    else{
+        //alert("You can select only 6 players");
+        // toast.error('You can select only 6 players')
+      toast.warn('You can select only 6 players!',{
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
 
   return (
     <>
+    <ToastContainer/>
       <Header  coin={coin} ></Header>
       <main>
         <Banner handleCoin={handleCoin} />
 
         {/* Conditional rendering on button for show Selected and Players Components*/}
-        <Availablenav handleAvailable={handleAvailable} handleSelected={handleSelected} />
+        <Availablenav handleAvailable={handleAvailable} handleSelected={handleSelected} selectedCount={choosePlayer.length} />
 
         {/* when click  Available & Add More Player btn the show players Components also show Always Available component*/}
         {selected && <Players handleAvailable={handleAvailable} handleAddToSelected={handleAddToSelected}></Players>}
         
         {/* when click  Selected show Selected Component*/}
-        {!selected &&  <Selected handleSelected={handleSelected} choosePlayer={choosePlayer}></Selected>}
+        {!selected &&  <Selected handleSelected={handleSelected} choosePlayer={choosePlayer} ></Selected>}
 
       </main>
       <Footer></Footer>

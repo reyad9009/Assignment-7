@@ -9,6 +9,7 @@ const Select = ({select}) => {
         </div>
     );
 };
+
 Select.propTypes = {
     select: PropTypes.object.isRequired
 }

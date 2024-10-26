@@ -26,8 +26,6 @@ const Player = ({player, handleAddToSelected}) => {
                 </div>
             </div>
         </div>
-    
-
     );
 };
 
