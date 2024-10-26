@@ -1,11 +1,21 @@
 import PropTypes from "prop-types";
+import { AiOutlineDelete } from "react-icons/ai";
 
 const Select = ({select}) => {
-    const {name, } = select;
+    const {cover, name,batting_style} = select;
     //console.log(name)
     return (
-        <div>
-            <h1>{name}</h1>
+        <div className="flex justify-between border-2 p-6 rounded-xl"> 
+            <div className="flex items-center gap-5">
+                <div className="w-[100px] h-[100px] relative overflow-hidden rounded-xl">
+                    <img className="w-[100px] h-[100px]  absolute" src={cover} alt="" />
+                </div>
+                <div>
+                    <h1 className="font-extrabold text-xl">{name}</h1>
+                    <p className="pt-2">{batting_style}</p>
+                </div>
+            </div>
+            <button className="text-red-600 text-2xl"><AiOutlineDelete /></button>
         </div>
     );
 };
