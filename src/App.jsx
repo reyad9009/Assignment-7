@@ -17,8 +17,10 @@ function App() {
   const [coin, setCoin] = useState(0);
   // function handle button every click add money
   const handleCoin = () =>{
-    setCoin(coin + 90000000)
+    setCoin(coin + 900000)
+    
   }
+
 
   // Functions for show the Components
   const [selected, setSelected] = useState(true);
@@ -44,12 +46,10 @@ function App() {
 
   const handleAddToSelected = (player) => {
     //const selectedCount = choosePlayer.length;
-
-    if (choosePlayer.length < 6) {
-      const newChoosePlayer = [...choosePlayer, player];
-        setChoosePlayer(newChoosePlayer);
-
-        toast.success(`Congrats!! ${player.name}`, {
+    if (coin < player.price) {
+      //const newChoosePlayer = [...choosePlayer, player];
+        //setChoosePlayer(newChoosePlayer);
+        toast.warn('Please Claim Free Credit',{
           position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
@@ -60,9 +60,8 @@ function App() {
           theme: "light",
         });
     } 
-    else{
-        //alert("You can select only 6 players");
-        // toast.error('You can select only 6 players')
+    else if(choosePlayer.length >= 6){
+     // setCoin(coin - player.price)
       toast.warn('You can select only 6 players!',{
         position: "top-center",
         autoClose: 5000,
@@ -74,8 +73,27 @@ function App() {
         theme: "light",
       });
     }
-  };
+    else{
+        //alert("You can select only 6 players");
+        // toast.error('You can select only 6 players')
+        const newChoosePlayer = [...choosePlayer, player];
+        setChoosePlayer(newChoosePlayer);
+        //setChoosePlayer([...choosePlayer, player]);
+        setCoin(coin - player.price);
 
+        toast.success(`Congrats!! ${player.name}`, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+    }
+  };
+//
   return (
     <>
     <ToastContainer/>
